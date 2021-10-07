@@ -1,4 +1,5 @@
 const inquirer = require('inquirer');
+const fs = require('fs');
 
 const generateReadME = (answers) =>
 
@@ -6,39 +7,55 @@ inquirer
     .prompt([
         {
             type: 'input',
-            name: '',
+            name: 'title',
+            message: 'Project title?',
+        },
+        {
+            type: 'input',
+            name: 'descr',
             message: '',
         },
         {
             type: 'input',
-            name: '',
+            name: 'toc',
             message: '',
         },
         {
             type: 'input',
-            name: '',
+            name: 'instal',
             message: '',
         },
         {
             type: 'input',
-            name: '',
+            name: 'use',
             message: '',
         },
         {
             type: 'input',
-            name: '',
+            name: 'lic',
             message: '',
         },
         {
             type: 'input',
-            name: '',
+            name: 'contr',
             message: '',
         },
         {
             type: 'input',
-            name: '',
+            name: 'test',
+            message: '',
+        },
+        {
+            type: 'input',
+            name: 'ques',
             message: '',
         },
     ])
-fs.writeFile('ReadMeNOW.md', ReadMeNOW, (err)) =>
-err ? console.log(err) : console.log('You dont have to go 192.168.0.1, but you cant stay here.');
+    .then((answers) => {
+        const ReadMeNOW = generateReadME(answers);
+
+        fs.writeFile('ReadMeNOW.md', ReadMeNOW, (err) =>
+        err ? console.log(err) : console.log('You can ReadMeNOW!')
+        );
+    });
+    
