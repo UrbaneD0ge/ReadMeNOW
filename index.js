@@ -37,7 +37,7 @@ inquirer
             message: 'Description:',
         },
         {
-            type: 'list',
+            type: 'input',
             name: 'toc',
             message: 'Table of Contents:',
         },
@@ -52,9 +52,10 @@ inquirer
             message: 'Usage Information:',
         },
         {
-            type: 'input',
+            type: 'checkbox',
             name: 'lic',
             message: 'License:',
+            choices: ["Apache", "Boost", "BSD-3", "BSD-2", "CC0", "Attribution 4.0 International", "Attribution-ShareAlike 4.0 International", "Eclipse", "GNU", "IBM", "ISC", "MIT", "Mozilla", "Open Data Commons", "Perl", "SIL", "Unlicense","WTFPL", "Zlib"]
         },
         {
             type: 'input',
