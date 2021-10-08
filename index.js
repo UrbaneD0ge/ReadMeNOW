@@ -5,7 +5,7 @@ const generateReadME = (answers) =>
 `
 # ${answers.title}
 ## Description
-#####${answers.descr}
+##### ${answers.descr}
 ## Table of Contents
 ##### 
 *  ${answers.toc}
