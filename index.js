@@ -2,7 +2,28 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 
 const generateReadME = (answers) =>
+`
+# ${answers.title}
+## Description
+#####${answers.descr}
+## Table of Contents
+##### 
+*  ${answers.toc}
+### Installation
+##### ${answers.instal}
+### Usage Information
+##### ${answers.use}
+### License
+##### ${answers.lic}
+### Contributing
+##### ${answers.contr}
+### Tests
+##### ${answers.test}
+### Questions
+##### ${answers.ques}
+`;
 
+// inquirer prompts and stores responses
 inquirer 
     .prompt([
         {
@@ -16,7 +37,7 @@ inquirer
             message: 'Description:',
         },
         {
-            type: 'input',
+            type: 'list',
             name: 'toc',
             message: 'Table of Contents:',
         },
