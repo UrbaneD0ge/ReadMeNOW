@@ -13,42 +13,42 @@ inquirer
         {
             type: 'input',
             name: 'descr',
-            message: '',
+            message: 'Description:',
         },
         {
             type: 'input',
             name: 'toc',
-            message: '',
+            message: 'Table of Contents:',
         },
         {
             type: 'input',
             name: 'instal',
-            message: '',
+            message: 'Installation:',
         },
         {
             type: 'input',
             name: 'use',
-            message: '',
+            message: 'Usage Information:',
         },
         {
             type: 'input',
             name: 'lic',
-            message: '',
+            message: 'License:',
         },
         {
             type: 'input',
             name: 'contr',
-            message: '',
+            message: 'Contributing:',
         },
         {
             type: 'input',
             name: 'test',
-            message: '',
+            message: 'Tests:',
         },
         {
             type: 'input',
             name: 'ques',
-            message: '',
+            message: 'Questions:',
         },
     ])
     .then((answers) => {
