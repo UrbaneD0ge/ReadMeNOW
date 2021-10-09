@@ -1,34 +1,12 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const util = require('util');
-const md = require()
 
-const generateReadME = (answers) =>
-`
-# ${answers.title}
-${answers.badge}
-## Description
-##### ${answers.descr}
-## Table of Contents
-##### 
-*  ${answers.toc}
-### Installation
-##### ${answers.instal}
-### Usage Information
-##### ${answers.use}
-### License
-##### ${answers.lic}
-### Contributing
-##### ${answers.contr}
-### Tests
-##### ${answers.test}
-### Questions
-##### ${answers.ques}
-`;
+const writeFileAsync = util.promisify(fs.writeFile);
 
 // inquirer prompts and stores responses
-inquirer 
-    .prompt([
+const inquirify = () => {
+    return inquirer.prompt([
         {
             type: 'input',
             name: 'title',
@@ -75,8 +53,33 @@ inquirer
             name: 'ques',
             message: 'Questions:',
         },
-    ])
-    .then((lic) => {
+    ]);
+};
+
+function ReadMeNOW(answers) {
+    return `
+    # ${answers.title}
+    ${answers.badge}
+    ## Description
+    ##### ${answers.descr}
+    ## Table of Contents
+    ##### ${answers.toc}
+    ### Installation
+    ##### ${answers.instal}
+    ### Usage Information
+    ##### ${answers.use}
+    ### License
+    ##### ${answers.lic}
+    ### Contributing
+    ##### ${answers.contr}
+    ### Tests
+    ##### ${answers.test}
+    ### Questions
+    ##### ${answers.ques}
+    `;
+};
+
+(lic) => {
         switch(lic) {
             case 'Apache':
                 badge = '[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)'
@@ -110,11 +113,14 @@ inquirer
                 break;
     }
         return badge
-    })
-    .then((answers) => {
-        const ReadMeNOW = generateReadME(answers);
+    };
 
-        fs.writeFile('ReadMeNOW.md', ReadMeNOW, (err) =>
-        err ? console.log(err) : console.log('You can ReadMeNOW!')
-        );
-    });
+const init = () => {
+    inquirify()
+        // .then(lic())
+        .then((answers) => writeFileAsync('ReadMeNOW.md', ReadMeNOW(answers)))
+        .then(() => console.log('You can ReadMeNOW!'))
+        .catch((err) => console.error(err));
+    };
+
+    init();
