@@ -28,10 +28,10 @@ const inquirify = () => {
             message: 'Usage Information:',
         },
         {
-            type: 'checkbox',
+            type: 'list',
             name: 'lic',
             message: 'License:',
-            choices: ['Apache', 'BSD-3', 'BSD-2', 'Creative Commons 4.0 International', 'Eclipse', 'GNU', 'IBM', 'ISC', 'MIT', 'Mozilla', 'Zlib'],
+            choices: ['Apache', 'BSD-3', 'BSD-2', 'Creative Commons 4.0 International', 'Eclipse', 'GNU', 'IBM', 'ISC', 'MIT', 'Mozilla', 'Zlib', 'none'],
         },
         {
             type: 'input',
@@ -84,7 +84,7 @@ function getBadge(lic) {
             case 'Zlib':
                 badge = '![License: Zlib](https://img.shields.io/badge/License-Zlib-lightgrey.svg)'
                 break;
-            case '':
+            case 'none':
                 badge = ''
                 break;
     }
