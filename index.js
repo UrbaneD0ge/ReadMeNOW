@@ -138,7 +138,7 @@ function ReadMeNOW(answers) {
 
 const init = () => {
 inquirify()
-    .then((answers) => writeFileAsync('ReadMeNOW.txt', ReadMeNOW(answers)))
+    .then((answers) => writeFileAsync('ReadMeNOW.md', ReadMeNOW(answers)))
     .then(() => console.log('You can ReadMeNOW!'))
     .catch((err) => console.error(err));
 };
