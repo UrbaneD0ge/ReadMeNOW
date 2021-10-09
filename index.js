@@ -28,7 +28,7 @@ const inquirify = () => {
             message: 'Usage Information:',
         },
         {
-            type: 'list',
+            type: 'checkbox',
             name: 'lic',
             message: 'License:',
             choices: ['Apache', 'BSD-3', 'BSD-2', 'Creative Commons 4.0 International', 'Eclipse', 'GNU', 'IBM', 'ISC', 'MIT', 'Mozilla', 'Zlib'],
@@ -55,34 +55,34 @@ const inquirify = () => {
 function getBadge(lic) {
         switch(lic) {
             case 'Apache':
-                badge = '[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)'
+                badge = '![Apache License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)'
                 break;
             case 'BSD-3':
-                badge = '[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)'
+                badge = '![BSD-3 License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)'
                 break;
             case 'BSD-2':
-                badge = '[![License](https://img.shields.io/badge/License-BSD%202--Clause-orange.svg)](https://opensource.org/licenses/BSD-2-Clause)'
+                badge = '![BSD-2 License](https://img.shields.io/badge/License-BSD%202--Clause-orange.svg)'
                 break;
             case 'Creative Commons 4.0 International':
-                badge = '[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)(http://creativecommons.org/licenses/by/4.0/)'
+                badge = '![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)'
                 break;
             case 'Eclipse':
-                badge = '[![License](https://img.shields.io/badge/License-EPL%201.0-red.svg)](https://opensource.org/licenses/EPL-1.0)'
+                badge = '![Eclipse License](https://img.shields.io/badge/License-EPL%201.0-red.svg)'
                 break;
             case 'GNU':
-                badge = '[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0)'
+                badge = '![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)'
                 break;
             case 'IBM':
-                badge = '[![License: IPL 1.0](https://img.shields.io/badge/License-IPL%201.0-blue.svg)](https://opensource.org/licenses/IPL-1.0)'
+                badge = '![License: IPL 1.0](https://img.shields.io/badge/License-IPL%201.0-blue.svg)'
                 break;
             case 'MIT':
-                badge = '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)'
+                badge = '![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)'
                 break;
             case 'Mozilla':
-                badge = '[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)'
+                badge = '![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)'
                 break;
             case 'Zlib':
-                badge = '[![License: Zlib](https://img.shields.io/badge/License-Zlib-lightgrey.svg)](https://opensource.org/licenses/Zlib)'
+                badge = '![License: Zlib](https://img.shields.io/badge/License-Zlib-lightgrey.svg)'
                 break;
             case '':
                 badge = ''
@@ -102,13 +102,13 @@ ${getBadge(answers.lic)}
 
 ## Table of Contents
 
-    * [Installation](#installation)
-    * [Usage](#usage)
-    * [License](#license)
-    * [Contributing](#contributing)
-    * [Tests](#tests)
-    * [Questions](#questions)
-    * 
+* [Installation](#installation)
+* [Usage](#usage)
+* [License](#license)
+* [Contributing](#contributing)
+* [Tests](#tests)
+* [Questions](#questions)
+
 ### Installation
 
 ##### ${answers.instal}
