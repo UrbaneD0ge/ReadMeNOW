@@ -1,41 +1,40 @@
 # ReadMeNOW!
 
-    [![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)    
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)(http://creativecommons.org/licenses/by/4.0/)    
 
-    ## Description
+## Description
 
-    ##### A node-based, command-line tool for creating quick, concise ReadMe.md files.
+##### A node-based, command line tool for creating quick, concise ReadMe.md files.
 
-    ## Table of Contents
+## Table of Contents
 
-        * [Installation](#installation)
-        * [Usage](#usage)
-        * [License](#license)
-        * [Contributing](#contributing)
-        * [Tests](#tests)
-        * [Questions](#questions)
-        * 
-    ### Installation
+    * [Installation](#installation)
+    * [Usage](#usage)
+    * [License](#license)
+    * [Contributing](#contributing)
+    * [Tests](#tests)
+    * [Questions](#questions)
+    * 
+### Installation
 
-    ##### Uses 'inquirer'
+##### Uses node package 'inquirer'
 
-    ### Usage
+### Usage
 
-    ##### Run with ```node index.js```
+##### Run with ```node index.js```
 
-    ### License
+### License
 
-    ##### Mozilla
+##### Creative Commons 4.0 International
 
-    ### Contributing
+### Contributing
 
-    ##### Kip Dunlap
+##### Kip Dunlap
 
-    ### Tests
+### Tests
 
-    ##### N/A
+##### N/A
 
-    ### Questions
+### Questions
 
-    ##### Send questions to my Github!
-    
+##### Send questions to my GitHub!

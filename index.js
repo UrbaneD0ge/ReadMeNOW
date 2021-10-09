@@ -94,46 +94,46 @@ function getBadge(lic) {
 function ReadMeNOW(answers) {
     return `# ${answers.title}
 
-    ${getBadge(answers.lic)}    
+${getBadge(answers.lic)}    
 
-    ## Description
+## Description
 
-    ##### ${answers.descr}
+##### ${answers.descr}
 
-    ## Table of Contents
+## Table of Contents
 
-        * [Installation](#installation)
-        * [Usage](#usage)
-        * [License](#license)
-        * [Contributing](#contributing)
-        * [Tests](#tests)
-        * [Questions](#questions)
-        * 
-    ### Installation
+    * [Installation](#installation)
+    * [Usage](#usage)
+    * [License](#license)
+    * [Contributing](#contributing)
+    * [Tests](#tests)
+    * [Questions](#questions)
+    * 
+### Installation
 
-    ##### ${answers.instal}
+##### ${answers.instal}
 
-    ### Usage
+### Usage
 
-    ##### ${answers.use}
+##### ${answers.use}
 
-    ### License
+### License
 
-    ##### ${answers.lic}
+##### ${answers.lic}
 
-    ### Contributing
+### Contributing
 
-    ##### ${answers.contr}
+##### ${answers.contr}
 
-    ### Tests
+### Tests
 
-    ##### ${answers.test}
+##### ${answers.test}
 
-    ### Questions
+### Questions
 
-    ##### ${answers.ques}
-    `
-    ;
+##### ${answers.ques}
+`
+;
 };
 
 const init = () => {
