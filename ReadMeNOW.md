@@ -1,20 +1,26 @@
+# when I was
 
-    # a
-    undefined
+    [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)(http://creativecommons.org/licenses/by/4.0/)    
     ## Description
-    ##### b
+    ##### a young man
     ## Table of Contents
-    ##### c
+    # Table of Contents 
+        * [Installation](#installation)
+        * [Usage](#usage)
+        * [License](#license)
+        * [Contributing](#contributing)
+        * [Tests](#tests)
+        * [Questions](#questions)
     ### Installation
-    ##### d
-    ### Usage Information
-    ##### e
+    ##### my father
+    ### Usage
+    ##### took me into the city
     ### License
-    ##### Apache,BSD-3,BSD-2,Creative Commons 4.0 International,Eclipse,GNU,IBM,ISC,MIT,Mozilla,Zlib
+    ##### Creative Commons 4.0 International
     ### Contributing
-    ##### h
+    ##### to see a marching band
     ### Tests
-    ##### u
+    ##### he said
     ### Questions
-    ##### j
+    ##### son when
     

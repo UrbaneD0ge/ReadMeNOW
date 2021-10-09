@@ -19,11 +19,6 @@ const inquirify = () => {
         },
         {
             type: 'input',
-            name: 'toc',
-            message: 'Table of Contents:',
-        },
-        {
-            type: 'input',
             name: 'instal',
             message: 'Installation:',
         },
@@ -33,10 +28,10 @@ const inquirify = () => {
             message: 'Usage Information:',
         },
         {
-            type: 'checkbox',
+            type: 'list',
             name: 'lic',
             message: 'License:',
-            choices: ["Apache", "BSD-3", "BSD-2", "Creative Commons 4.0 International", "Eclipse", "GNU", "IBM", "ISC", "MIT", "Mozilla", "Zlib"]
+            choices: ['Apache', 'BSD-3', 'BSD-2', 'Creative Commons 4.0 International', 'Eclipse', 'GNU', 'IBM', 'ISC', 'MIT', 'Mozilla', 'Zlib'],
         },
         {
             type: 'input',
@@ -56,30 +51,8 @@ const inquirify = () => {
     ]);
 };
 
-function ReadMeNOW(answers) {
-    return `
-    # ${answers.title}
-    ${answers.badge}
-    ## Description
-    ##### ${answers.descr}
-    ## Table of Contents
-    ##### ${answers.toc}
-    ### Installation
-    ##### ${answers.instal}
-    ### Usage Information
-    ##### ${answers.use}
-    ### License
-    ##### ${answers.lic}
-    ### Contributing
-    ##### ${answers.contr}
-    ### Tests
-    ##### ${answers.test}
-    ### Questions
-    ##### ${answers.ques}
-    `;
-};
 
-(lic) => {
+function getBadge(lic) {
         switch(lic) {
             case 'Apache':
                 badge = '[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)'
@@ -111,16 +84,63 @@ function ReadMeNOW(answers) {
             case 'Zlib':
                 badge = '[![License: Zlib](https://img.shields.io/badge/License-Zlib-lightgrey.svg)](https://opensource.org/licenses/Zlib)'
                 break;
+            case '':
+                badge = ''
+                break;
     }
         return badge
-    };
+};
+
+function ReadMeNOW(answers) {
+    return `# ${answers.title}
+
+    ${getBadge(answers.lic)}    
+
+    ## Description
+
+    ##### ${answers.descr}
+
+    ## Table of Contents
+
+        * [Installation](#installation)
+        * [Usage](#usage)
+        * [License](#license)
+        * [Contributing](#contributing)
+        * [Tests](#tests)
+        * [Questions](#questions)
+        * 
+    ### Installation
+
+    ##### ${answers.instal}
+
+    ### Usage
+
+    ##### ${answers.use}
+
+    ### License
+
+    ##### ${answers.lic}
+
+    ### Contributing
+
+    ##### ${answers.contr}
+
+    ### Tests
+
+    ##### ${answers.test}
+
+    ### Questions
+
+    ##### ${answers.ques}
+    `
+    ;
+};
 
 const init = () => {
-    inquirify()
-        // .then(lic())
-        .then((answers) => writeFileAsync('ReadMeNOW.md', ReadMeNOW(answers)))
-        .then(() => console.log('You can ReadMeNOW!'))
-        .catch((err) => console.error(err));
-    };
+inquirify()
+    .then((answers) => writeFileAsync('ReadMeNOW.txt', ReadMeNOW(answers)))
+    .then(() => console.log('You can ReadMeNOW!'))
+    .catch((err) => console.error(err));
+};
 
-    init();
+init();
