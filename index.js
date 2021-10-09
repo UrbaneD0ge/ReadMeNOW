@@ -93,7 +93,6 @@ function getBadge(lic) {
 
 function ReadMeNOW(answers) {
     return `# ${answers.title}
-
 ${getBadge(answers.lic)}    
 
 ## Description
