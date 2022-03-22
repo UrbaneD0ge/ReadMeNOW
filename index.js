@@ -186,7 +186,7 @@ https://us06web.zoom.us/meeting/register/tJAqfuyvqz4sE9aRG-HDEoLldjZtzVXF4uuK`
 };
 
 function ReadMeNOW(answers) {
-    return `Meeting Agenda for NPU-${answers.title}
+    return `Remote meeting access info for NPU-${answers.title}
 
 WHEN: ${answers.date}
 ${getBadge(answers.title)}`
