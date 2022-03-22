@@ -10,135 +10,116 @@ const inquirify = () => {
         {
             type: 'input',
             name: 'title',
-            message: 'Project title?',
+            message: 'NPU Designation?',
         },
         {
             type: 'input',
-            name: 'descr',
-            message: 'Description:',
-        },
-        {
-            type: 'input',
-            name: 'instal',
-            message: 'Installation:',
-        },
-        {
-            type: 'input',
-            name: 'use',
-            message: 'Usage Information:',
-        },
-        {
-            type: 'list',
-            name: 'lic',
-            message: 'License:',
-            choices: ['Apache', 'BSD-3', 'BSD-2', 'Creative Commons 4.0 International', 'Eclipse', 'GNU', 'IBM', 'ISC', 'MIT', 'Mozilla', 'Zlib', 'none'],
-        },
-        {
-            type: 'input',
-            name: 'contr',
-            message: 'Contributing:',
-        },
-        {
-            type: 'input',
-            name: 'test',
-            message: 'Tests:',
-        },
-        {
-            type: 'input',
-            name: 'ques',
-            message: 'Questions:',
+            name: 'date',
+            message: 'Date?',
         },
     ]);
 };
 
 
-function getBadge(lic) {
-        switch(lic) {
-            case 'Apache':
-                badge = '![Apache License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)'
-                break;
-            case 'BSD-3':
-                badge = '![BSD-3 License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)'
-                break;
-            case 'BSD-2':
-                badge = '![BSD-2 License](https://img.shields.io/badge/License-BSD%202--Clause-orange.svg)'
-                break;
-            case 'Creative Commons 4.0 International':
-                badge = '![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)'
-                break;
-            case 'Eclipse':
-                badge = '![Eclipse License](https://img.shields.io/badge/License-EPL%201.0-red.svg)'
-                break;
-            case 'GNU':
-                badge = '![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)'
-                break;
-            case 'IBM':
-                badge = '![License: IPL 1.0](https://img.shields.io/badge/License-IPL%201.0-blue.svg)'
-                break;
-            case 'MIT':
-                badge = '![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)'
-                break;
-            case 'Mozilla':
-                badge = '![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)'
-                break;
-            case 'Zlib':
-                badge = '![License: Zlib](https://img.shields.io/badge/License-Zlib-lightgrey.svg)'
-                break;
-            case 'none':
+function getBadge(title) {
+        switch(title) {
+            case 'A':
                 badge = ''
                 break;
-    }
+            case 'B':
+                badge = ''
+                break;
+            case 'C':
+                badge = ''
+                break;
+            case 'D':
+                badge = ''
+                break;
+            case 'E':
+                badge = ''
+                break;
+            case 'F':
+                badge = ''
+                break;
+            case 'G':
+                badge = ''
+                break;
+            case 'H':
+                badge = ''
+                break;
+            case 'I':
+                badge = ''
+                break;
+            case 'J':
+                badge = ''
+                break;
+            case 'K':
+                badge = ''
+            break;
+            case 'L':
+                badge = ''
+            break;
+            case 'M':
+                badge = ''
+            break;
+            case 'N':
+                badge = ''
+            break;
+            case 'O':
+                badge = ''
+            break;
+            case 'P':
+                badge = ''
+            break;
+            case 'Q':
+                badge = ''
+            break;
+            case 'R':
+                badge = ''
+            break;
+            case 'S':
+                badge = ''
+            break;
+            case 'T':
+                badge = ''
+            break;
+            case 'V':
+                badge = ''
+            break;
+            case 'W':
+                badge = ''
+            break;
+            case 'X':
+                badge = ''
+            break;
+            case 'Y':
+                badge = ''
+            break;
+            case 'Z':
+                badge = ''
+            break;
+            case 'APAB':
+                badge = `Meeting ID: 947 9575 5692
+Dial In: +1 646-558-8656 	Access Code: 947 9575 5692#
+Register in advance for this meeting:
+https://us06web.zoom.us/meeting/register/tJAqfuyvqz4sE9aRG-HDEoLldjZtzVXF4uuK`
+            break;
+            }
         return badge
 };
 
 function ReadMeNOW(answers) {
-    return `# ${answers.title}
-${getBadge(answers.lic)}    
+    return `Meeting Agenda for NPU-${answers.title}
 
-## Description
-
-##### ${answers.descr}
-
-## Table of Contents
-
-* [Installation](#installation)
-* [Usage](#usage)
-* [License](#license)
-* [Contributing](#contributing)
-* [Tests](#tests)
-* [Questions](#questions)
-
-### Installation
-
-##### ${answers.instal}
-
-### Usage
-
-##### ${answers.use}
-
-### License
-
-##### ${answers.lic}
-
-### Contributing
-
-##### ${answers.contr}
-
-### Tests
-
-##### ${answers.test}
-
-### Questions
-
-##### ${answers.ques}
-`
+WHEN: ${answers.date}
+${getBadge(answers.title)}`
 ;
 };
 
 const init = () => {
 inquirify()
-    .then((answers) => writeFileAsync('ReadMeNOW.md', ReadMeNOW(answers)))
-    .then(() => console.log('You can ReadMeNOW!'))
+    .then((answers) => writeFileAsync('NPUNGLR8.txt', ReadMeNOW(answers)))
+    .then(() => console.log('NPUNGLIFY!!'))
     .catch((err) => console.error(err));
 };
 

@@ -1,0 +1,39 @@
+# The NPUNGLR8R
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+
+## Description
+
+##### A command line based tool for generating NPU Agendas
+
+## Table of Contents
+
+* [Installation](#installation)
+* [Usage](#usage)
+* [License](#license)
+* [Contributing](#contributing)
+* [Tests](#tests)
+* [Questions](#questions)
+
+### Installation
+
+##### run "node index.js" from command line to start.
+
+### Usage
+
+##### Generates ReadMeNow.docx filling an old markdown template literal
+
+### License
+
+##### MIT
+
+### Contributing
+
+##### Kip Dunlap
+
+### Tests
+
+##### hah
+
+### Questions
+
+##### Don't ask me, I don't know.
