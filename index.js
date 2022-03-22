@@ -193,6 +193,29 @@ ${getBadge(answers.title)}`
 ;
 };
 
+// Temp Literal for Distro Email
+// `Greetings!
+
+// You are receiving this e-mail because you opted in for monthly meeting notices for NPU-${answers.title}.
+
+// Agendas for monthly NPU meetings are posted on our website:
+
+// Neighborhood Directory and NPU Meeting Agendas | Atlanta, GA (atlantaga.gov)
+
+// NPU-${answers.title} | ${answers.date}.
+
+// ${answers.badge}
+
+// City of Atlanta residents are encouraged to attend their local Neighborhood Planning Unit (NPU) meetings to review proposed development, applications for alcohol licenses and special events, as well as amendments to the City’s Zoning Ordinance and Comprehensive Development Plan. Thanks again for your commitment to being actively involved in the City of Atlanta’s future!
+
+// If you desire additional information regarding NPU-${answers.title}, please contact the following person(s):
+
+// NPU Chair: ${chair}
+// NPU Planner: ${planner}
+
+// Thank you,`//
+
+
 const init = () => {
 inquirify()
     .then((answers) => writeFileAsync('NPUNGLR8.txt', ReadMeNOW(answers)))
