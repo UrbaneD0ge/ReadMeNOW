@@ -17,6 +17,12 @@ const inquirify = () => {
             name: 'date',
             message: 'Date?',
         },
+        // {
+        //     type: 'list',
+        //     name: 'docType',
+        //     message: 'What document are we generating?',
+        //     choices: ['Draft to Chair', 'Final to Chair', 'Nextdoor Post', 'Distro eMail', 'NTA']
+        // }
     ]);
 };
 
@@ -73,10 +79,10 @@ https://zoom.us/j/97652537837`
                 break;
             case 'I':
                 meet = `Meeting ID:	926 1333 2610
-                Dial In: +1 646-558-8656 	Access Code:  926 1333 2610#
-                Register in advance for this meeting:
-                https://us06web.zoom.us/meeting/register/tJYrduqrrTksG9Q0zhO-fIWbSdULod3adqpH
-                `
+Dial In: +1 646-558-8656 	Access Code:  926 1333 2610#
+Register in advance for this meeting:
+https://us06web.zoom.us/meeting/register/tJYrduqrrTksG9Q0zhO-fIWbSdULod3adqpH
+`
                 break;
             case 'J':
                 meet = `Meeting ID:	914 9575 9127
@@ -186,35 +192,27 @@ https://us06web.zoom.us/meeting/register/tJAqfuyvqz4sE9aRG-HDEoLldjZtzVXF4uuK`
 };
 
 function ReadMeNOW(answers) {
-    return `Remote meeting access info for NPU-${answers.title}
+return `Greetings!
 
-WHEN: ${answers.date}
-${getMeeting(answers.title)}`
-;
+You are receiving this e-mail because you opted in for monthly meeting notices for NPU-${answers.title}.
+
+Agendas for monthly NPU meetings are posted on our website:
+
+Neighborhood Directory and NPU Meeting Agendas | Atlanta, GA (atlantaga.gov)
+
+NPU-${answers.title} | ${answers.date}.
+
+${answers.meet}
+
+City of Atlanta residents are encouraged to attend their local Neighborhood Planning Unit (NPU) meetings to review proposed development, applications for alcohol licenses and special events, as well as amendments to the City’s Zoning Ordinance and Comprehensive Development Plan. Thanks again for your commitment to being actively involved in the City of Atlanta’s future!
+
+If you desire additional information regarding NPU-${answers.title}, please contact the following person(s):
+
+NPU Chair: {chair}
+NPU Planner: {planner}
+
+Thank you,`
 };
-
-// Temp Literal for Distro Email
-// `Greetings!
-
-// You are receiving this e-mail because you opted in for monthly meeting notices for NPU-${answers.title}.
-
-// Agendas for monthly NPU meetings are posted on our website:
-
-// Neighborhood Directory and NPU Meeting Agendas | Atlanta, GA (atlantaga.gov)
-
-// NPU-${answers.title} | ${answers.date}.
-
-// ${answers.meet}
-
-// City of Atlanta residents are encouraged to attend their local Neighborhood Planning Unit (NPU) meetings to review proposed development, applications for alcohol licenses and special events, as well as amendments to the City’s Zoning Ordinance and Comprehensive Development Plan. Thanks again for your commitment to being actively involved in the City of Atlanta’s future!
-
-// If you desire additional information regarding NPU-${answers.title}, please contact the following person(s):
-
-// NPU Chair: ${chair}
-// NPU Planner: ${planner}
-
-// Thank you,`//
-
 
 const init = () => {
 inquirify()
