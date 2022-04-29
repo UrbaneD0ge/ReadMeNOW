@@ -1,25 +1,18 @@
 {
-  "name": "readmenow",
+  "name": "npunglr8r",
   "version": "1.0.0",
+  "description": "Workflow Automation for NPU team COA/DCP",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/UrbaneD0ge/ReadMeNOW.git"
+    "url": "NPUNGLR8R"
   },
   "author": "Kip Dunlap",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/UrbaneD0ge/ReadMeNOW/issues"
-  },
-  "homepage": "https://github.com/UrbaneD0ge/ReadMeNOW#readme",
   "dependencies": {
-    "inquirer": "^8.2.0",
-    "util": "^0.12.4"
-  },
-  "devDependencies": {},
-  "keywords": [],
-  "description": ""
+    "inquirer": "^8.2.2"
+  }
 }
